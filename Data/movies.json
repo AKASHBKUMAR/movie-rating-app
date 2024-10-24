@@ -1,70 +1,21 @@
 [
-  {
-    "id": 1,
-    "name": "Peaky Blinders",
-    "releaseDate": 2013,
-    "duration": 60
-  },
-  {
-    "id": 2,
-    "name": "Breaking Bad",
-    "releaseDate": 2008,
-    "duration": 47
-  },
+  { "id": 1, "name": "Peaky Blinders", "releaseDate": 2013, "duration": 60 },
+  { "id": 2, "name": "Bourne Supremacy", "releaseDate": 2004, "duration": 180 },
   {
     "id": 3,
-    "name": "Stranger Things",
+    "name": "Bourne Legacy",
     "releaseDate": 2016,
-    "duration": 50
+    "duration": 50,
+    "releaseYear": 2012
   },
-  {
-    "id": 4,
-    "name": "The Crown",
-    "releaseDate": 2016,
-    "duration": 58
-  },
-  {
-    "id": 5,
-    "name": "Game of Thrones",
-    "releaseDate": 2011,
-    "duration": 57
-  },
-  {
-    "id": 6,
-    "name": "The Mandalorian",
-    "releaseDate": 2019,
-    "duration": 40
-  },
-  {
-    "id": 7,
-    "name": "The Witcher",
-    "releaseDate": 2019,
-    "duration": 60
-  },
-  {
-    "id": 8,
-    "name": "Fargo",
-    "releaseDate": 2014,
-    "duration": 50
-  },
-  {
-    "id": 9,
-    "name": "The Office",
-    "releaseDate": 2005,
-    "duration": 22
-  },
-  {
-    "id": 10,
-    "name": "Sherlock",
-    "releaseDate": 2010,
-    "duration": 90
-  },
-  {
-    "id": 11,
-    "name": "Interstellar",
-    "releaseDate": 2014,
-    "duration": 120
-  },
+  { "id": 4, "name": "The Crown", "releaseDate": 2016, "duration": 58 },
+  { "id": 5, "name": "Game of Thrones", "releaseDate": 2011, "duration": 57 },
+  { "id": 6, "name": "The Mandalorian", "releaseDate": 2019, "duration": 40 },
+  { "id": 7, "name": "The Witcher", "releaseDate": 2019, "duration": 60 },
+  { "id": 8, "name": "Fargo", "releaseDate": 2014, "duration": 50 },
+  { "id": 9, "name": "The Office", "releaseDate": 2005, "duration": 22 },
+  { "id": 10, "name": "Sherlock", "releaseDate": 2010, "duration": 90 },
+  { "id": 11, "name": "Interstellar", "releaseDate": 2014, "duration": 120 },
   {
     "id": 12,
     "name": "Inception",
