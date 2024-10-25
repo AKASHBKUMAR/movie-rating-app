@@ -13,6 +13,7 @@ const movieRouter = require("./Routes/MovieRoutes");
 
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(express.static("./Public"));
 
 app.use("/api/v1/movies", movieRouter);
 
