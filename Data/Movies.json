@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "name": "Peaky Blinders",
+    "releaseDate": 2013,
+    "duration": 60
+  },
+  {
+    "id": 2,
+    "name": "Bourne Supremacy",
+    "releaseDate": 2004,
+    "duration": 180
+  },
+  {
+    "id": 3,
+    "name": "Bourne Legacy",
+    "releaseDate": 2016,
+    "duration": 50,
+    "releaseYear": 2012
+  },
+  {
+    "id": 4,
+    "name": "The Crown",
+    "releaseDate": 2016,
+    "duration": 58
+  },
+  {
+    "id": 5,
+    "name": "Game of Thrones",
+    "releaseDate": 2011,
+    "duration": 57
+  },
+  {
+    "id": 10,
+    "name": "Sherlock",
+    "releaseDate": 2010,
+    "duration": 90
+  },
+  {
+    "id": 11,
+    "name": "Interstellar",
+    "releaseDate": 2014,
+    "duration": 120
+  },
+  {
+    "id": 12,
+    "name": "Inception",
+    "releaseDate": "2010-07-16",
+    "duration": 148
+  },
+  {
+    "id": 13,
+    "name": "The Dark Knight",
+    "releaseDate": "2008-07-18",
+    "duration": 152
+  },
+  {
+    "id": 14,
+    "name": "Parasite",
+    "releaseDate": "2019-05-30",
+    "duration": 132
+  }
+]
