@@ -4,8 +4,33 @@ const movies = JSON.parse(
   fileSystem.readFileSync("./Data/Movies.json", "utf-8")
 );
 
+const checkID = (req, res,next,value)=>{
+  const movie = movies.find((element)=>
+    {
+      if(element.id === value *1)
+        return element;
+    })
+    if(!movie)
+    {
+      return res.status(404).json({status:"Failure",data:{movie:`No Movie Found with the ID:  ${value}`}});
+    }
+    next();
+}
+//Validating whether the Movie has a Object.
+const validateBody =(req, res,next)=>{
+  if( !req.body.name || !req.body.releaseDate || !req.body.duration)
+  {
+    return res.status(400).json({status:"Failure",message:"Not a Valid Movie Data"});
+  }
+  next();
+}
+
+
+
+
+
 // GET all Movies
-exports.getAllMovies = (req, res) => {
+const getAllMovies = (req, res) => {
   res.status(200).json({
     status: "success",
     requestedAt: req.requestedAt,
@@ -14,7 +39,7 @@ exports.getAllMovies = (req, res) => {
 };
 
 // ADD New Movie
-exports.addNewMovie = (req, res) => {
+const createNewMovie = (req, res) => {
   const newId = movies[movies.length - 1].id + 1;
   const newMovie = Object.assign({ id: newId }, req.body);
   movies.push(newMovie);
@@ -28,25 +53,23 @@ exports.addNewMovie = (req, res) => {
 };
 
 // GET - Movie By ID
-exports.getMovieById = (req, res) => {
+const getMovieById = (req, res) => {
   const id = req.params.id * 1;
   const movieById = movies.find((element) => {
     if (element.id === id) return element;
   });
-  if (movieById)
-    return res.status(200).json({
+  return res.status(200).json({
       status: "success",
-
       data: { movie: movieById },
     });
-  return res.status(404).json({
-    status: "Failed",
-    data: { movie: `No Movie Object is available in the ID ${id}` },
-  });
+  // return res.status(404).json({
+  //   status: "Failed",
+  //   data: { movie: `No Movie Object is available in the ID ${id}` },
+  // });
 };
 
 //PATCH - Update Movie By ID:
-exports.UpdateMovieById = (req, res) => {
+const UpdateMovieById = (req, res) => {
   const movieID = req.params.id * 1;
   const movieToBeUpdated = movies.find((element) => {
     if (element.id === movieID) return element;
@@ -65,12 +88,11 @@ exports.UpdateMovieById = (req, res) => {
           .json({ status: "success", data: { movie: updatedMovie } });
       }
     );
-  } else
-    return res.status(404).json({status:"Failure",data:{movie:`No Movie with the available ID ${movieID}`}});
+  }
 };
 
 
-exports.deleteMovieById = (req, res) => {
+const deleteMovieById = (req, res) => {
   const movieID = req.params.id * 1;
   const movieToBeDeleted = movies.find((element) => {
     if (element.id === movieID) return element;
@@ -86,3 +108,5 @@ exports.deleteMovieById = (req, res) => {
     return res.status(204).json({ status: "success", data: { movie: null } });
   });
 };
+
+module.exports = {getAllMovies,getMovieById,createNewMovie: createNewMovie,deleteMovieById,UpdateMovieById,checkID,validateBody}
