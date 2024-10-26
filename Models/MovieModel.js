@@ -2,12 +2,52 @@ const mongoose =require("mongoose");
 const movieSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: [true, "Name is a Required Field"],
+    required: [true, "Name is a Required Field!"],
     unique: true,
+    trim: true,
   },
-  description: String,
-  duration: { type: Number, required: [true, "Duration is a required Field"] },
-  rating: { type: Number, default: 1.0 },
+  description: {
+    type: String,
+    required: [true, "Description is a required Field!"],
+    trim: true,
+  },
+  duration: {
+    type: Number,
+    required: [true, "Duration is a required Field"],
+  },
+  rating: {
+    type: Number,
+  },
+  totalRatings: {
+    type: Number,
+  },
+  relaseYear: {
+    type: Number,
+    required: [true, "Release Year is a required Field"],
+  },
+  releaseDate: {
+    type: Date,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now(),
+  },
+  genres: {
+    type: [String],
+    required: [true, "Genre is a Required Field!"],
+  },
+  coverImage: {
+    type: String,
+    required: [true, "cover Image is a Required Field!"],
+  },
+  actors: {
+    type: [String],
+    required: [true, "Actors is a Required Field!"],
+  },
+  price: {
+    type: Number,
+    required: [true, "Price is a Required Field!"],
+  },
 });
 
 const Movie = mongoose.model("Movies", movieSchema);

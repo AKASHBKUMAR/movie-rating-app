@@ -1,1 +1,296 @@
-[{"id":1,"name":"Peaky Blinders","releaseDate":2013,"duration":60},{"id":2,"name":"Bourne Supremacy","releaseDate":2004,"duration":180},{"id":3,"name":"Bourne Legacy","releaseDate":2016,"duration":50,"releaseYear":2012},{"id":5,"name":"Game of Thrones","releaseDate":2011,"duration":57},{"id":10,"name":"Sherlock","releaseDate":2010,"duration":90},{"id":11,"name":"Interstellar","releaseDate":2014,"duration":120},{"id":12,"name":"Inception","releaseDate":"2010-07-16","duration":148},{"id":13,"name":"The Dark Knight","releaseDate":"2008-07-18","duration":152},{"id":14,"name":"Parasite","releaseDate":"2019-05-30","duration":132},{"id":15,"name":"The Bourne Ultimatum","releaseDate":"2007-08-03","duration":115},{"id":16,"name":"The Social Network","releaseDate":"2010-10-01","duration":120},{"id":17,"name":"The Social Network","releaseDate":"2010-10-01","duration":120},{"id":18,"name":"Vasool Raja Mbbs"}]
+[
+  {
+    "name": "Inception",
+    "description": "A skilled thief is offered a chance to erase his criminal record by planting an idea into a target's subconscious.",
+    "duration": 148,
+    "rating": 8.8,
+    "totalRatings": 2000000,
+    "relaseYear": 2010,
+    "releaseDate": "2010-07-16T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "coverImage": "https://example.com/inception-cover.jpg",
+    "actors": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Elliot Page"
+    ],
+    "price": 14.99
+  },
+  {
+    "name": "The Dark Knight",
+    "description": "Batman faces the Joker, a criminal mastermind who seeks to create chaos in Gotham City.",
+    "duration": 152,
+    "rating": 9.0,
+    "totalRatings": 2500000,
+    "relaseYear": 2008,
+    "releaseDate": "2008-07-18T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "coverImage": "https://example.com/dark-knight-cover.jpg",
+    "actors": [
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart"
+    ],
+    "price": 15.99
+  },
+  {
+    "name": "Interstellar",
+    "description": "A team of explorers travels through a wormhole in space to ensure humanity's survival.",
+    "duration": 169,
+    "rating": 8.6,
+    "totalRatings": 1600000,
+    "relaseYear": 2014,
+    "releaseDate": "2014-11-07T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "coverImage": "https://example.com/interstellar-cover.jpg",
+    "actors": [
+      "Matthew McConaughey",
+      "Anne Hathaway",
+      "Jessica Chastain"
+    ],
+    "price": 13.99
+  },
+  {
+    "name": "Parasite",
+    "description": "The Kims, a poor family, con their way into working for a wealthy family, but their easy life gets complicated when their deception is threatened.",
+    "duration": 132,
+    "rating": 8.6,
+    "totalRatings": 1000000,
+    "relaseYear": 2019,
+    "releaseDate": "2019-05-30T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "coverImage": "https://example.com/parasite-cover.jpg",
+    "actors": [
+      "Song Kang-ho",
+      "Lee Sun-kyun",
+      "Cho Yeo-jeong"
+    ],
+    "price": 12.99
+  },
+  {
+    "name": "The Shawshank Redemption",
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "duration": 142,
+    "rating": 9.3,
+    "totalRatings": 2300000,
+    "relaseYear": 1994,
+    "releaseDate": "1994-09-23T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Drama"
+    ],
+    "coverImage": "https://example.com/shawshank-cover.jpg",
+    "actors": [
+      "Tim Robbins",
+      "Morgan Freeman"
+    ],
+    "price": 10.99
+  },
+  {
+    "name": "Gladiator",
+    "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+    "duration": 155,
+    "rating": 8.5,
+    "totalRatings": 1500000,
+    "relaseYear": 2000,
+    "releaseDate": "2000-05-05T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama"
+    ],
+    "coverImage": "https://example.com/gladiator-cover.jpg",
+    "actors": [
+      "Russell Crowe",
+      "Joaquin Phoenix"
+    ],
+    "price": 11.99
+  },
+  {
+    "name": "The Godfather",
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "duration": 175,
+    "rating": 9.2,
+    "totalRatings": 1700000,
+    "relaseYear": 1972,
+    "releaseDate": "1972-03-24T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "coverImage": "https://example.com/godfather-cover.jpg",
+    "actors": [
+      "Marlon Brando",
+      "Al Pacino",
+      "James Caan"
+    ],
+    "price": 9.99
+  },
+  {
+    "name": "The Matrix",
+    "description": "A computer hacker learns about the true nature of reality and his role in the war against its controllers.",
+    "duration": 136,
+    "rating": 8.7,
+    "totalRatings": 1600000,
+    "relaseYear": 1999,
+    "releaseDate": "1999-03-31T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Action",
+      "Sci-Fi"
+    ],
+    "coverImage": "https://example.com/matrix-cover.jpg",
+    "actors": [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Carrie-Anne Moss"
+    ],
+    "price": 10.99
+  },
+  {
+    "name": "Forrest Gump",
+    "description": "The presidencies of Kennedy and Johnson, the Vietnam War, and more are seen through the eyes of an Alabama man with an IQ of 75.",
+    "duration": 142,
+    "rating": 8.8,
+    "totalRatings": 1900000,
+    "relaseYear": 1994,
+    "releaseDate": "1994-07-06T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "coverImage": "https://example.com/forrest-gump-cover.jpg",
+    "actors": [
+      "Tom Hanks",
+      "Robin Wright"
+    ],
+    "price": 9.99
+  },
+  {
+    "name": "The Lion King",
+    "description": "Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.",
+    "duration": 88,
+    "rating": 8.5,
+    "totalRatings": 1000000,
+    "relaseYear": 1994,
+    "releaseDate": "1994-06-15T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Drama"
+    ],
+    "coverImage": "https://example.com/lion-king-cover.jpg",
+    "actors": [
+      "Matthew Broderick",
+      "Jeremy Irons"
+    ],
+    "price": 8.99
+  },
+  {
+    "name": "Pulp Fiction",
+    "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "duration": 154,
+    "rating": 8.9,
+    "totalRatings": 1800000,
+    "relaseYear": 1994,
+    "releaseDate": "1994-10-14T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "coverImage": "https://example.com/pulp-fiction-cover.jpg",
+    "actors": [
+      "John Travolta",
+      "Uma Thurman",
+      "Samuel L. Jackson"
+    ],
+    "price": 10.99
+  },
+  {
+    "name": "Avengers: Endgame",
+    "description": "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more.",
+    "duration": 181,
+    "rating": 8.4,
+    "totalRatings": 2300000,
+    "relaseYear": 2019,
+    "releaseDate": "2019-04-26T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "coverImage": "https://example.com/avengers-endgame-cover.jpg",
+    "actors": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Scarlett Johansson"
+    ],
+    "price": 15.99
+  },
+  {
+    "name": "Titanic",
+    "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+    "duration": 195,
+    "rating": 7.8,
+    "totalRatings": 1500000,
+    "relaseYear": 1997,
+    "releaseDate": "1997-12-19T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "coverImage": "https://example.com/titanic-cover.jpg",
+    "actors": [
+      "Leonardo DiCaprio",
+      "Kate Winslet"
+    ],
+    "price": 11.99
+  },
+  {
+    "name": "Joker",
+    "description": "In Gotham City, a mentally troubled comedian embarks on a downward spiral, leading to the creation of an iconic villain.",
+    "duration": 122,
+    "rating": 8.5,
+    "totalRatings": 1400000,
+    "relaseYear": 2019,
+    "releaseDate": "2019-10-04T00:00:00.000Z",
+    "createdAt": "2024-10-26T00:00:00.000Z",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "coverImage": "https://example.com/joker-cover.jpg",
+    "actors": [
+      "Joaquin Phoenix",
+      "Robert De Niro"
+    ],
+    "price": 13.99
+  }
+]
