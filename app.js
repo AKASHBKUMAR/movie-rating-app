@@ -17,7 +17,6 @@ mongoose.connect(process.env.CONNECTION_STRING,{useNewUrlParser:true})
 const app = express();
 
 
-
 const movieRouter = require("./Routes/MovieRoutes");
 
 

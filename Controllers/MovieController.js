@@ -14,7 +14,16 @@ const movieModel = require("./../Models/MovieModel");
 const getAllMovies = async(req, res) => {
   try
   {
-    const movies = await movieModel.find();
+    // const exludeFields = ["sort","page","limit","fields"];
+    // const queryObject = {...req.query};
+    // exludeFields.forEach((element)=>{delete queryObject[element]});
+    // console.log(queryObject);
+    let queryString = JSON.stringify(req.query);
+    queryString = queryString.replace(/\b(lt|lte|gt|gte)\b/g,(match)=>`$${match}`)
+    const queryObject = JSON.parse(queryString);
+    console.log(queryObject);
+    const movies = await movieModel.find(queryObject);
+
     res.status(200).json({status:"success",length:movies.length,data:{movies}});
   }
   catch(error)
