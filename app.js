@@ -8,7 +8,7 @@ dotenv.config({path:"./config.env"});
 
 const PORT = process.env.PORT || 3500;
 
-mongoose.connect(process.env.CONNECTION_STRING,{useNewUrlParser:true})
+mongoose.connect(process.env.CONNECTION_STRING)
   .then((connection)=>{console.log("DB Connection Successful")})
   .catch((error)=>{console.log(error)});
 
@@ -18,6 +18,7 @@ const app = express();
 
 
 const movieRouter = require("./Routes/MovieRoutes");
+const authRouter = require("./Routes/authRoutes");
 
 
 app.use(express.json());
@@ -26,5 +27,7 @@ if(process.env.NODE_ENV === "Development")
 app.use(express.static("./Public"));
 
 app.use("/api/v1/movies", movieRouter);
+app.use("/api/v1/users",authRouter);
+
 
 app.listen(PORT,()=>{console.log(`Server has started in localhost:${process.env.PORT}`)});

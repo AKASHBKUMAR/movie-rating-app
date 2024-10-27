@@ -5,7 +5,7 @@
     "duration": 148,
     "rating": 8.8,
     "totalRatings": 2000000,
-    "relaseYear": 2010,
+    "releaseYear": 2010,
     "releaseDate": "2010-07-16T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -27,7 +27,7 @@
     "duration": 152,
     "rating": 9.0,
     "totalRatings": 2500000,
-    "relaseYear": 2008,
+    "releaseYear": 2008,
     "releaseDate": "2008-07-18T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -49,7 +49,7 @@
     "duration": 169,
     "rating": 8.6,
     "totalRatings": 1600000,
-    "relaseYear": 2014,
+    "releaseYear": 2014,
     "releaseDate": "2014-11-07T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -71,7 +71,7 @@
     "duration": 132,
     "rating": 8.6,
     "totalRatings": 1000000,
-    "relaseYear": 2019,
+    "releaseYear": 2019,
     "releaseDate": "2019-05-30T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -92,7 +92,7 @@
     "duration": 142,
     "rating": 9.3,
     "totalRatings": 2300000,
-    "relaseYear": 1994,
+    "releaseYear": 1994,
     "releaseDate": "1994-09-23T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -111,7 +111,7 @@
     "duration": 155,
     "rating": 8.5,
     "totalRatings": 1500000,
-    "relaseYear": 2000,
+    "releaseYear": 2000,
     "releaseDate": "2000-05-05T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -132,7 +132,7 @@
     "duration": 175,
     "rating": 9.2,
     "totalRatings": 1700000,
-    "relaseYear": 1972,
+    "releaseYear": 1972,
     "releaseDate": "1972-03-24T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -153,7 +153,7 @@
     "duration": 136,
     "rating": 8.7,
     "totalRatings": 1600000,
-    "relaseYear": 1999,
+    "releaseYear": 1999,
     "releaseDate": "1999-03-31T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -174,7 +174,7 @@
     "duration": 142,
     "rating": 8.8,
     "totalRatings": 1900000,
-    "relaseYear": 1994,
+    "releaseYear": 1994,
     "releaseDate": "1994-07-06T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -194,7 +194,7 @@
     "duration": 88,
     "rating": 8.5,
     "totalRatings": 1000000,
-    "relaseYear": 1994,
+    "releaseYear": 1994,
     "releaseDate": "1994-06-15T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -215,7 +215,7 @@
     "duration": 154,
     "rating": 8.9,
     "totalRatings": 1800000,
-    "relaseYear": 1994,
+    "releaseYear": 1994,
     "releaseDate": "1994-10-14T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -236,7 +236,7 @@
     "duration": 181,
     "rating": 8.4,
     "totalRatings": 2300000,
-    "relaseYear": 2019,
+    "releaseYear": 2019,
     "releaseDate": "2019-04-26T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -258,7 +258,7 @@
     "duration": 195,
     "rating": 7.8,
     "totalRatings": 1500000,
-    "relaseYear": 1997,
+    "releaseYear": 1997,
     "releaseDate": "1997-12-19T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [
@@ -278,7 +278,7 @@
     "duration": 122,
     "rating": 8.5,
     "totalRatings": 1400000,
-    "relaseYear": 2019,
+    "releaseYear": 2019,
     "releaseDate": "2019-10-04T00:00:00.000Z",
     "createdAt": "2024-10-26T00:00:00.000Z",
     "genres": [

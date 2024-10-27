@@ -21,7 +21,7 @@ const movieSchema = new mongoose.Schema({
   totalRatings: {
     type: Number,
   },
-  relaseYear: {
+  releaseYear: {
     type: Number,
     required: [true, "Release Year is a required Field"],
   },

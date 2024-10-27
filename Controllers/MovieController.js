@@ -1,52 +1,57 @@
 const movieModel = require("./../Models/MovieModel");
 
 
-//Validating whether the Movie has a Object.
-// const validateBody =(req, res,next)=>{
-//   if( !req.body.name || !req.body.duration)
-//   {
-//     return res.status(400).json({status:"Failure",message:"Not a Valid Movie Data"});
-//   }
-//   next();
-// }
+const getHighestRated = (req, res, next)=>{
+  try{
+    req.query.limit = 10;
+    req.query.sort = "-rating";
+    next();
+  }
+  catch(error)
+  {
+    res.status(400).json({status:"fail",data:error.message});
+  }
+}
 
 // GET all Movies
 const getAllMovies = async(req, res) => {
   try
-  {
-    const objects = ["sort","page"]
-    let queryString = JSON.stringify(req.query);
-    queryString = queryString.replace(/\b(lt|lte|gt|gte)\b/g,(match)=>`$${match}`);
-    const queryObject = JSON.parse(queryString);
-    if(req.query.sort || req.query.fields)
-    {
-      delete  queryObject.sort;
-      delete queryObject.fields;
-    }
-    let query = movieModel.find(queryObject);
+  { 
+    const excludeFields = ["sort", "page", "limit", "fields"];
 
-    //SORTING IF QUERY STRING HAS SORT PROPERTY
-    if (req.query.sort) {
-      const sortBy = req.query.sort.split(",").join(" ");
-      query = query.sort(sortBy);
-    }
-    else
-    {
-      query = query.sort("-createdAt");
-    }
-    if(req.query.fields)
-    {
-      const fields = req.query.fields.split(",").join(" ");
-      console.log(fields);
-      query = query.select(fields);
-    }
-    else
-    {
-      query = query.select("-__v ")
-    }
-    const movies = await query;
+    let shallowQueryObject = { ...req.query };
 
-    res.status(200).json({status:"success",length:movies.length,data:{movies}});
+    excludeFields.forEach((element) => {delete shallowQueryObject[element];});
+
+   //Advance Filtering
+    let shallowQueryObjectString = JSON.stringify(shallowQueryObject);
+    
+    shallowQueryObjectString = shallowQueryObjectString.replace(/\b(lt|lte|gt|gte)\b/g,(match) => `$${match}`);
+    
+    shallowQueryObject = JSON.parse(shallowQueryObjectString);
+
+    //GETTING RESULTS FROM THE MONGODB AND SORTING
+    const data = movieModel.find(shallowQueryObject);
+
+    // SORTING LOGIC IS DONE HERE
+    req.query.sort? data.sort(req.query.sort.split(",").join(" ")): data.sort("-totalRatings");
+
+    //Limiting the Fields
+    req.query.fields ? data.select(req.query.fields.split(",").join(" ")): data.select("name rating releaseYear price coverImage");
+
+   //Paginate
+    const page = req.query.page ? req.query.page * 1 : 1;
+    const limit = req.query.limit ? req.query.limit * 1 : 10;
+    const skip = (page - 1) * 10;
+    if (req.query.page) 
+    {
+      if (skip >= (await movieModel.countDocuments())) 
+      {
+        throw new Error("There is no data present");
+      }
+    }
+    const movies = await data.skip(skip).limit(limit);
+    res.status(200).json({ status: "success", length: movies.length , data: { movie: movies } });
   }
   catch(error)
   {
@@ -103,5 +108,24 @@ const deleteMovieById = async (req, res) => {
     res.status(404).json({ status: "success", message:error.message });
   }
 };
+const getMovieStats = async(req, res) =>{
+  try
+  {
+    const stats = await movieModel.aggregate([{$match:{rating:{$gte:4.5}}}]);
+    res.status(200).json({status:"success",count:stats.length,data:stats});
+  }
+  catch(error)
+  {
+    res.status(404).json({status:"fail",data:error.message});
+  }
+}
 
-module.exports = {getAllMovies,getMovieById,createNewMovie: createNewMovie,deleteMovieById,UpdateMovieById}
+module.exports = {
+  getHighestRated,
+  getAllMovies,
+  getMovieById,
+  createNewMovie: createNewMovie,
+  deleteMovieById,
+  UpdateMovieById,
+  getMovieStats
+};
